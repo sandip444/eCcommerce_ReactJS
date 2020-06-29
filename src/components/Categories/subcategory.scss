@@ -1,0 +1,141 @@
+.sub-category {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    color: gray;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px lightgray;
+
+    .photo {
+        min-height: 190px;
+        background-color: white;
+        margin-bottom: 5px;
+    }
+
+    img {
+        min-height: 190px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .name {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    
+
+    .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 8px;
+
+        .update {
+            height: 20px;
+            color: white;
+            padding: 1px 0;
+            border-radius: 3px;
+            background-color: #4DB649;
+            box-shadow: 0px 2px 10px lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .update:hover {
+            box-shadow: 0px 10px 20px lightgray;
+        }
+
+        .delete {
+            height: 20px;
+            color: white;
+            padding: 1px 5px;
+            border-radius: 3px;
+            background-color: #ff5555;
+            box-shadow: 0px 2px 10px lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .delete:hover {
+            box-shadow: 0px 10px 20px lightgray;
+        }
+    }
+}
+
+.update-subcategory {
+    margin-top: 10px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 3px 10px lightgray;
+    animation: add 1s ease-in-out;
+    border-radius: 3px;
+    width: 99%;
+    margin-bottom: 10px;
+
+    @keyframes add {
+        0%{
+            opacity: 0;
+            width: 0%;
+        }
+        50%{
+            width: 105%;
+        }
+        100%{
+            width: 99%;
+            opacity: 1;
+        }
+    }
+
+    form {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    input {
+        font-size: 14px;
+        padding: 5px;
+        border: 1px solid #87B7FB;
+        background-color: #f5f5f5;
+        border-radius: 3px;
+        width: 93%;
+        margin-right: 5px;
+        margin-top: 5px;
+        transition: 1s;
+    }
+
+    button {
+        margin-top: 5px;
+        background-color:  #4694fc;
+        border: none;
+        color: white;
+        border-radius: 3px;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 700px){
+    .sub-category {
+        .actions {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .photo {
+            height: auto;
+            min-height: 140px;
+        }
+
+        img {
+            min-height: 140px;
+            height: auto;
+        }
+    }
+}

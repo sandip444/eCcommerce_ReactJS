@@ -1,0 +1,69 @@
+.orders {
+    padding-top: 50px;
+    padding-left: 150px;
+
+    .tab {
+        margin-top: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+        grid-gap: 15px;
+        margin-bottom: 20px;
+        animation: tab 1s ease-in-out;
+
+        div {
+            background-color: white;
+            padding: 5px 0;
+            text-align: center;
+            box-shadow: 0 2px 3px lightgrey;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.5s;
+        }
+
+        div:hover {
+            background-color: #4694fc;
+            color: white;
+            box-shadow: 0 5px 10px lightgrey;
+        }
+
+        .active {
+            background-color: #4694fc;
+            color: white;
+        }
+
+    }
+
+    @keyframes tab {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    .wrapper {
+        padding: 50px;
+        color: #4694fc;
+
+    }
+}
+
+@media (max-width: 700px){
+    .orders {
+        padding-top: 60px;
+        padding-left: 0px;
+        padding-bottom: 60px;
+
+        .tab {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .wrapper {
+            padding: 10px;
+            
+
+        }
+    }
+}

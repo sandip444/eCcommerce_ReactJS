@@ -1,0 +1,97 @@
+.customers {
+    padding-top: 50px;
+    padding-left: 150px;
+
+    .wrapper {
+        padding: 50px;
+        color: #4694fc;
+
+        .loading-customers {
+            height: 40px;
+            width: 100%;
+            border-radius: 30px;
+            background-color: white;
+            margin-top: 10px;
+            animation: loading-customers 1.5s ease-in-out infinite;
+        }
+
+        @keyframes loading-customers {
+            0%{
+                opacity: 0.4;
+            }
+            50%{
+                opacity: 0.9;
+            }
+            100%{
+                opacity: 0.4;
+            }
+        }
+
+        .customer {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            background-color: white;
+            padding: 5px;
+            color: #505050;
+            border-radius: 30px;
+            align-items: center;
+            box-shadow: 0 3px 2px lightgray;
+            animation: customer 1s ease-in-out;
+
+            .photo {
+                display: flex;
+                align-items: center;
+
+                img {
+                    background-color: lightgray;
+                    height: 30px;
+                    width:  30px;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+        @keyframes customer {
+            0%{
+                margin-top: -50px;
+                opacity: 0;
+            }
+            100%{
+                margin-top: 10px;
+                opacity: 1;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 700px){
+    .customers {
+        padding-left: 0px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        .wrapper {
+            padding: 10px;
+
+            .customer {
+                padding: 10px;
+                border-radius: 20px;
+
+                display: grid;
+                grid-template-columns: 1fr;
+
+                .photo {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}

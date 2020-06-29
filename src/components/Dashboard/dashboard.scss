@@ -1,0 +1,206 @@
+.dashboard {
+    padding-top: 50px;
+    padding-left: 150px;
+
+    .wrapper {
+        padding: 50px;
+
+        span {
+            color: #4694fc;
+        }
+
+        .total {
+            margin-top: 10px; 
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            
+            i {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: #4694fc;
+                font-size: 90px;
+            }
+
+            .card {
+                cursor: pointer;
+                background-color: white;
+                width: 30%;
+                border-radius: 17px;
+                box-shadow: 0px 3px 5px lightgrey;
+                display: flex;
+                animation: card 1s ease-in-out;
+                transition: 0.5s;
+
+                div {
+                    width: 50%;
+                    text-align: center;
+
+                    p {
+                        margin-top: 10px;;
+                        color:gray;
+                        margin-bottom: 10px;
+                        font-size: 15px;
+                    }
+
+                    h1 {
+                        margin-top: 0px;
+                        color: #4694fc;
+                        font-weight: 400;
+                        font-size: 50px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .card:hover {
+                box-shadow: 0 10px 50px lightgray;
+                width: 35%;
+            }
+
+            @keyframes card {
+                0%{
+                    opacity: 0;
+                    margin-top: -100px
+                }
+                100%{
+                    opacity: 1;
+                    margin-top: 0
+                }
+            }
+        }
+
+        button {
+            background-color: #4694fc;
+            font-size: 14px;
+            padding: 3px 20px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .form-bank {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+
+            input {
+                margin-bottom: 10px;
+                font-size: 14px;
+                padding: 5px 5px;
+                border: 1px solid lightblue;
+            }
+        }
+
+        .load {
+            div {
+                width: 100%;
+                height: 50px;
+                background-color: lightgray;
+                margin-bottom: 10px;
+                animation: load 2s infinite;
+                border-radius: 20px;
+
+            }
+
+            @keyframes laod {
+                0%{
+                    opacity: 0.2;
+                }
+                50%{
+                    opacity: 0.9;
+                }
+                100%{
+                    opacity: 0.2;
+                }
+            }
+            
+        }
+
+        .bank {
+            background-color: white;
+            margin-top: 10px;
+            padding: 10px;
+            box-shadow: 0px 3px 5px lightgrey;
+            border-radius: 3px;
+            position: relative;
+
+            div {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                padding: 5px;
+                grid-gap: 10px;
+                color: #4694fc;
+
+                span {
+                    color: #505050;
+                }
+            }
+
+            .action {
+                position: absolute;
+                right: 0px;
+
+                span {
+                    top: -20px;
+                    right: 13px;
+                    color: gray;
+                    cursor: pointer;
+                    font-weight: 600;
+                    font-size: 30px;
+                    position: absolute;
+                }
+
+                button {
+                    position: absolute;
+                    top: 20px;
+                    right: 10px;
+                    animation: button 1s ease-in-out;
+                }
+
+                @keyframes button {
+                    0%{
+                        opacity: 0;
+                        transform: scale(0.2);
+                    }
+                    50%{
+                        transform: scale(1.2);
+                    }
+                    100%{
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 700px){
+    .dashboard {
+        padding-bottom: 60px;
+        padding-left: 0px;
+        padding-top: 60px;
+
+        .wrapper {
+            padding: 10px;
+            
+            .total {
+                flex-wrap: wrap;
+
+                .card {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                .card:hover {
+                    box-shadow: 0 10px 50px lightgray;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
